@@ -1,0 +1,90 @@
+html,
+body {
+  word-wrap: break-word;
+  word-break: keep-all;
+  -webkit-text-size-adjust: none;
+  -webkit-overflow-scrolling: touch;
+  @include qd-reset-box-model;
+  @include qd-default-font;
+}
+
+#{$qd-html-elements} {
+  @include qd-reset-box-model;
+  @include qd-box-sizing;
+  @include qd-default-font;
+}
+
+#{$qd-list-elements} {
+  @include qd-reset-list-style;
+}
+
+strong,
+b {
+  font-weight: $qd-font-weight-regular;
+}
+
+a {
+  text-decoration: none;
+  color: $qd-anchor-color;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $qd-anchor-color-visited !important;
+    text-decoration: line-through;
+  }
+
+  &.is-default {
+    &.is-hover {
+      color: $qd-anchor-color-hover !important;
+    }
+  }
+  &.has-color {
+    &.is-hover {
+      opacity: .7;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+caption {
+  @include qd-hide;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  background: none;
+  color: $qd-color-gray-100;
+  @include qd-reset-font;
+  @include qd-reset-box-model;
+  @include qd-border-radius(0);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+::-webkit-scrollbar {width:6px; height:6px;} /* width */
+::-webkit-scrollbar-thumb {background:rgba(144, 147, 153, 0.3); border-radius:4px;} /* Handle */
+::-webkit-scrollbar-thumb:hover {background:rgba(144, 147, 153, 0.5);} /* Handle on hover */

@@ -1,0 +1,42 @@
+/// Common CSS<br />
+/// @author my.kim
+html {
+  font-family: $qd-font-family;
+  font-size: $qd-font-size-root;
+
+  *,
+  *::before,
+  *::after {
+    @include qd-box-sizing();
+  }
+
+  h1 {
+    font-size: $qd-h1-font-size;
+    font-weight: $qd-h1-font-weight;
+  }
+
+  h2 {
+    font-size: $qd-h2-font-size;
+    font-weight: $qd-h2-font-weight;
+  }
+
+  h3 {
+    font-size: $qd-h3-font-size;
+    font-weight: $qd-h3-font-weight;
+  }
+
+  h4 {
+    font-size: $qd-h4-font-size;
+    font-weight: $qd-h4-font-weight;
+  }
+
+  h5 {
+    font-size: $qd-h5-font-size;
+    font-weight: $qd-h5-font-weight;
+  }
+
+  h6 {
+    font-size: $qd-h6-font-size;
+    font-weight: $qd-h6-font-weight;
+  }
+}

@@ -1,0 +1,22 @@
+/** @define settings */
+/// navbar 설정버튼 style<br />
+/// @author my.kim
+.qd-settings {
+  position: relative;  
+  // transform: translateY(($qd-avatar-profile-height - $qd-navbar-item-height)/2);
+  cursor: pointer;
+
+  .icon-setting{
+    width: $qd-navbar-item-width;
+    height: $qd-navbar-item-height;
+
+    i {
+      font-size: $qd-navbar-item-font-size;
+      color: $qd-color-primary;
+    }
+    
+    svg {
+      fill: $qd-color-primary;
+    }
+  }
+}

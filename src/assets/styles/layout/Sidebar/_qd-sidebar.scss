@@ -1,0 +1,324 @@
+/** @define sidebar */
+/// 좌측 메뉴리스트 style<br />
+/// @author my.kim
+.qd-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $qd-sidebar-background-color;
+  box-shadow: 3px 0 6px rgba(200,200,200,0.6);
+  z-index: 999;
+
+  &__logo {
+    width: 100%;
+    height: $qd-navbar-height;
+    padding: 10px;
+
+    > span {
+      display: block;
+      height: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  // &__title {
+  //   @include qd-set-oneline-height(#{$qd-navbar-height});
+
+  //   border-bottom: 1px solid $qd-sidebar-border-color;
+  //   @include qd-control-by-parent(".is-open") {
+  //     width: $qd-sidebar-width;
+  //     font-size: $qd-h2-font-size;
+  //     transition: font-size width 0s ease-in-out;
+  //     transition-delay: 0.3s;
+  //   }
+  //   @include qd-control-by-parent(".is-close") {
+  //     width: $qd-sidebar-width-collapse;
+  //     font-size: $qd-font-size-xs;
+  //     transition: font-size width 0.3s ease-in-out;
+  //   }
+
+  //   &:hover{
+  //     background-color: transparent;
+  //   }
+  // }
+
+  .el-scrollbar {
+    max-height: calc(100vh - 60px);
+
+    .el-scrollbar__wrap {
+      max-height: calc(100vh - 60px);
+      margin-bottom: 0 !important;
+      overflow-x: hidden;
+      overflow-y: scroll;      
+    }
+
+    .el-scrollbar__bar.is-horizontal{
+      display: none;
+    }
+  }
+
+  .el-menu {
+    background-color: $qd-sidebar-item-sub-background-color;
+    &.el-invisible {
+      visibility: hidden;
+    }
+
+    & .svg-inline--fa {
+      display: inline-block;
+      width: 24px;
+      margin-right: 0;
+      font-size: $qd-font-size-m;
+    }
+
+    .el-menu-item {
+      @include qd-set-oneline-height(#{$qd-sidebar-item-main-height});
+      color: $qd-sidebar-item-main-color;
+      border-bottom:1px solid $qd-sidebar-border-color;      
+      
+      &:hover,
+      &:focus {
+        font-weight: $qd-font-weight-bold;
+        background-color: transparent;
+      }
+
+      span {
+        font-size: $qd-font-size-s;
+        font-weight: $qd-font-weight-regular;
+        margin-left: $qd-sidebar-item-margin;
+      }
+
+      i {
+        color: $qd-sidebar-item-main-color;
+      }
+
+      &.is-active {
+        font-size: $qd-font-size-l;
+        font-weight: $qd-font-weight-bold;
+
+        & span {
+          color: $qd-color-theme-70;
+          font-size: $qd-font-size-l;
+          font-weight: $qd-font-weight-bold;
+        }
+
+        > .el-tooltip {
+          line-height: $qd-sidebar-item-main-height;
+        }
+
+        i {
+          color: $qd-color-gray-100;
+        }
+      }
+    }
+
+    .el-submenu {
+      .el-icon-arrow-down {
+        font-size: $qd-sidebar-item-sub-arrow-font-size;
+
+        &::before {
+          content: "\e6df";
+          color: $qd-sidebar-item-main-color;
+        }
+      }
+
+      .el-icon-arrow-right {
+        &::before {
+          content: "";
+        }
+      }
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        font-size: $qd-font-size-s;
+        font-weight: $qd-font-weight-regular;
+        margin-left: $qd-sidebar-item-margin;
+
+        max-width: 75%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .el-submenu__title {
+        @include qd-set-oneline-height(#{$qd-sidebar-item-sub-height});
+        color: $qd-sidebar-item-main-color;        
+
+        &:hover {
+          font-weight: $qd-font-weight-bold;
+          background-color: transparent;
+          &  span {
+            font-weight: $qd-font-weight-bold;
+          }
+        }
+
+        i {
+          width: 16px;
+          height: 16px;
+          color: $qd-sidebar-item-main-color;
+        }        
+      } 
+      
+      .el-menu--inline {
+        position: relative;
+        border-bottom-color: transparent;
+
+        .el-menu-item {
+          @include qd-set-oneline-height(#{$qd-sidebar-item-sub-height});
+          border-bottom-color: transparent;
+        }        
+  
+        &::before{
+          display: block;
+          content:'';
+          width: 6px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          background-color: $qd-sidebar-item-sub-deaph2-background-color;
+          z-index: 1;
+        }
+
+        .el-submenu{
+          & > .el-menu--inline {
+            &::before{
+              background-color: $qd-sidebar-item-sub-deaph3-background-color;
+            }
+  
+            .el-submenu{
+              & > .el-menu--inline {
+                &::before{
+                  background-color: $qd-sidebar-item-sub-deaph4-background-color;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.is-opened{
+        &.is-active{
+          .svg-inline--fa,
+          span{            
+            color: $qd-sidebar-font-color-active;
+          }
+        }
+      }      
+    }
+
+    & > div > .el-submenu > .el-submenu__title {
+      @include qd-set-oneline-height(#{$qd-sidebar-item-main-height});
+      border-bottom:1px solid $qd-sidebar-border-color;
+    }
+
+    & > div > .el-submenu.is-opened {
+      border-bottom:1px solid $qd-sidebar-border-color;
+    }
+
+    // 접혔을 때
+    &:matches(.el-menu--collapse) {
+      & .svg-inline--fa {
+        height: 18px;
+        font-size: $qd-font-size-l;
+      }
+
+      .el-menu-item {
+        border-bottom-color: transparent;
+
+        &:hover {
+          font-weight: $qd-font-weight-bold;
+          &  span {
+            font-weight: $qd-font-weight-bold;
+          }
+        }
+
+        &.is-active {
+          color: $qd-color-theme-70;
+          font-size: $qd-font-size-l;
+          font-weight: $qd-font-weight-bold;
+          & span {
+            color: $qd-color-theme-70;
+            font-size: $qd-font-size-l;
+            font-weight: $qd-font-weight-bold;
+          }
+        }
+      }
+
+      .el-submenu {
+        .el-submenu__title {
+          border-bottom-color: transparent;
+        }
+
+        svg {
+          font-size: $qd-sidebar-icon-size;
+        }
+      }
+    }
+
+    &:not(.el-menu--collapse) {
+      width: $qd-sidebar-width;
+
+      .sidebar-sub__title{
+        display: none;
+        height: 0;
+        overflow: initial;
+      }
+    }
+  }
+}
+
+// 접혔을 때 서브 메뉴 hover 시 나오는 서브 메뉴 dropdown
+.el-menu--vertical{
+  .sidebar-sub__title{
+    display: block;
+    padding: 10px 20px;
+    color: $qd-color-gray-100;
+    background-color: #4B94AD;
+  }
+
+  .is-opened .sidebar-sub__title{
+    display: none;
+  }
+
+  .sidebar-sub__div{
+    max-height: calc(100vh - 100px);
+    padding:0 0 2px 0;
+    overflow-x: hidden;
+    overflow-y: auto;  
+    position: relative;
+
+    &::-webkit-scrollbar {width:6px; height:6px;} /* width */
+    // &::-webkit-scrollbar-track {background:rgba(255,255,255,0.7);} /* Track */
+    &::-webkit-scrollbar-thumb {background:rgba(144, 147, 153, 0.3); border-radius:4px;} /* Handle */
+    &::-webkit-scrollbar-thumb:hover {background:rgba(144, 147, 153, 0.5);} /* Handle on hover */    
+  }
+
+  .el-submenu__title{
+    @include qd-set-oneline-height(#{$qd-sidebar-item-main-height});    
+    color: $qd-sidebar-item-collapse-sub-color;
+    font-size: $qd-font-size-s;
+  }
+  .el-menu-item{
+    @include qd-set-oneline-height(#{$qd-sidebar-item-sub-height});
+    color: $qd-sidebar-item-collapse-sub-color;
+    font-size: $qd-font-size-s;
+
+    &:hover{
+      color: $qd-sidebar-item-collapse-sub-color-hover;
+    }
+
+    &.is-active{
+      font-weight: $qd-font-weight-bold;
+      color: $qd-sidebar-item-collapse-sub-color-active;
+    }
+  }
+
+  .el-menu--popup-right-start{
+    padding: 0px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
