@@ -1,0 +1,24 @@
+$_thememap: 
+    dashboard-background-color,
+    dashboard-background-image,
+    chartarea-background,
+    chartarea-title-color,
+    chartarea-brief-color,
+    titlearea-color,
+    listarea-background,
+    listarea-table-border-color,
+    listarea-table-th-background-color,
+    listarea-table-th-color,
+    listarea-table-td-color,
+    listarea-table-td-background-hover-color,
+    listarea-table-td-hover-color;
+
+$_themenames: 'dark';
+
+@each $theme in $_themenames {
+    .#{$theme} {
+        @each $key in $_thememap {
+            #{'--'+$key}: var(#{'--'+$theme+'-'+$key});
+        }
+    }
+}

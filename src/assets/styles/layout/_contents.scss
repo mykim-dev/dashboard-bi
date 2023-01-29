@@ -1,0 +1,116 @@
+.chart-area {
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 300px;
+    min-height: 300px;
+    border: 1px solid $chartarea-background;
+    background-color: $chartarea-background;
+    
+    &__head {
+        padding: 10px;
+
+        .tool-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__title {
+                color: $chartarea-title-color;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            &__ctrl {
+                display: none;
+
+                .qd-icon {
+                    width: 30px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        p {
+            margin: 5px 0;
+            color: $chartarea-brief-color;            
+            font-size: 12px;
+            font-weight: 100;
+        }
+    }
+
+    &__body {
+        flex: 1;
+        padding: 10px;
+        background: url(../img/img-nochart.png) no-repeat center center;
+    }
+
+    &.is-selected,
+    &:hover {
+        border-color: #387EE5;
+
+        .chart-area__head {
+            background-color: #EDF2F9;
+
+            .tool-bar {    
+                &__ctrl {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.title-area {
+    display: flex;
+    align-items: center;
+    color: $titlearea-color;
+    font-size: 20px;
+    font-weight: 700;
+
+    .qd-icon {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+}
+
+.list-area {
+    padding: 10px 20px;
+    background-color: $listarea-background;
+
+    .qd-list {
+        table {
+            border-spacing: 2px;
+            background-color: $listarea-background;
+
+            th,
+            td {                
+                padding: 10px;
+                border: 1px solid $listarea-table-border-color;
+            }
+
+            thead {
+                th {
+                    color: #374858;
+                    font-size: 14px;
+                    background-color: $listarea-table-th-background-color;
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        color: $listarea-table-td-color;
+                        background-color: $listarea-background;
+                    }
+
+                    &:hover {
+                        td {
+                            color: $listarea-table-td-hover-color;
+                            background-color: $listarea-table-td-background-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
