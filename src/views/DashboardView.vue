@@ -172,15 +172,15 @@
             <div class="contents__footer">
                 <ul class="qd-tags">
                     <li class="qd-tags__item is-selected">
-                        <a href="">대시보드1</a>
+                        <button data-target="">대시보드1</button>
                         <button type="button" class="qd-icon-btn"><font-awesome-icon icon="fa-solid fa-ellipsis-vertical" /></button>
                     </li>
                     <li class="qd-tags__item">
-                        <a href="">대시보드2</a>
+                        <button data-target="">대시보드2</button>
                         <button type="button" class="qd-icon-btn"><font-awesome-icon icon="fa-solid fa-ellipsis-vertical" /></button>
                     </li>
                     <li class="qd-tags__item">
-                        <a href="">대시보드3</a>
+                        <button data-target="">대시보드3</button>
                         <button type="button" class="qd-icon-btn"><font-awesome-icon icon="fa-solid fa-ellipsis-vertical" /></button>
                     </li>
                 </ul>

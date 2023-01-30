@@ -226,6 +226,8 @@ html {
     height: 30px;
     line-height: 1;
     padding: 0 20px;
+    margin-left: 10px;
+    position: relative;
     font-size: 0.875rem;
     color: #8d8d8d;
     border-radius: 5px;
@@ -271,11 +273,6 @@ html {
     &>.qd-icon {
         margin-right: 10px;
     }
-
-    &+.qd-btn,
-    &+.qd-icon-btn {
-        margin-left: 10px;
-    }
 }
 
 .qd-icon-btn {
@@ -284,12 +281,82 @@ html {
     align-items: center;
     min-width: 30px;
     height: 30px;
-    font-size: 0.875rem;
+    margin-left: 10px;
+    position: relative;
+    font-size: 16px;
     border-radius: 5px;
+}
 
-    &+.qd-btn {
-        margin-left: 10px;
+.icon-close {
+    &::before,
+    &::after {
+        display: block;
+        content: "";
+        width: 16px;
+        height: 2px;
+        margin-top: -1px;
+        margin-left: -8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 2px;
+        background-color: #808080;
     }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.icon-down {
+    &::before,
+    &::after {
+        display: block;
+        content: "";
+        width: 9px;
+        height: 2px;
+        margin-top: -1px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 2px;
+        background-color: #808080;
+    }
+
+    &::before {
+        margin-left: -8px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        margin-left: -3px;
+        transform: rotate(-45deg);
+    }
+}
+
+.icon-plus {
+    &::before,
+    &::after {
+        display: block;
+        content: "";
+        width: 14px;
+        height: 2px;
+        margin-top: -1px;
+        margin-left: -7px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 2px;
+        background-color: #808080;
+    }
+
+    &::after {
+        transform: rotate(90deg);
+    }    
 }
 
 .qd-search {
@@ -326,7 +393,7 @@ html {
         align-items: center;
         margin-bottom: 5px;
 
-        &>a {
+        &>button {
             display: inline-flex;
             justify-content: center;
             line-height: 38px;
@@ -371,7 +438,7 @@ dl.qd-accordion {
         justify-content: space-between;
         height: 30px;
         position: relative;
-        cursor: pointer;
+        border-bottom: 1px solid #ececec;
 
         strong {
             display: flex;
@@ -382,21 +449,20 @@ dl.qd-accordion {
                 color: #8D8D8D;
             }
         }
-
-        .qd-icon-btn {
-            font-size: 14px;
-        }
     }
 
     &>dd {
-        display: none;
-        border-top: 1px solid #ececec;
+        display: none;        
     }
 
     &.is-open {
-        .qd-icon-btn {
-            .svg-inline--fa.fa-angle-down {
-                transform: rotate(180deg);
+        .icon-down {
+            &::before {
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                transform: rotate(45deg);
             }
         }
 
@@ -412,32 +478,12 @@ dl.qd-accordion-square {
 
     &>dt {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        padding: 5px 0 5px 10px;        
+        padding: 0 5px 0 10px;
         position: relative;
         border-radius: 5px;
         background-color: #EDF3FD;
-
-        &:before {
-            display: block;
-            content: "";
-            width: 11px;
-            height: 2px;
-            position: absolute;
-            right: 10px;
-            background-color: #7c7c7c;
-        }
-
-        &:after {
-            display: block;
-            content: "";
-            width: 11px;
-            height: 2px;
-            position: absolute;
-            right: 10px;
-            background-color: #7c7c7c;
-            transform: rotate(-90deg);
-        }
     }
 
     &>dd {
@@ -449,12 +495,15 @@ dl.qd-accordion-square {
             color: #ffffff;
             background-color: #387EE5;
 
-            &:before {
-                background-color: #ffffff;
-            }
+            .icon-plus {
+                &::before, 
+                &::after {
+                    background-color: #ffffff;
+                }
 
-            &:after {
-                display: none;
+                &::after {
+                    display: none;
+                }
             }
         }
 

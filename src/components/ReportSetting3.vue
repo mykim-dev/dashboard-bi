@@ -10,12 +10,12 @@
         <div class="qd-contents-aside__main">
             <div class="qd-tab">
                 <div class="qd-tab__bar">
-                    <button data-target="#tab-chart" class="is-selected">Chart</button>
+                    <button data-target="#tab-chart">Chart</button>
                     <button data-target="#tab-option">Option</button>
-                    <button data-target="#tab-data">Data</button>
+                    <button data-target="#tab-data" class="is-selected">Data</button>
                 </div>
 
-                <div id="tab-chart" class="tab-chart qd-tab__content is-selected">
+                <div id="tab-chart" class="tab-chart qd-tab__content">
                     <div class="area-group">
                         <div class="area-item">
                             <dl class="qd-accordion is-open">
@@ -344,7 +344,7 @@
                     </div>
                 </div>
 
-                <div id="tab-data" class="tab-data qd-tab__content">
+                <div id="tab-data" class="tab-data qd-tab__content is-selected">
                     <div class="area-group">
                         <div class="area-item data-item">
                             <dl class="qd-accordion is-open">

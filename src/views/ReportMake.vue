@@ -70,8 +70,8 @@
             <div class="contents__main">
                 <div class="qd-tab">
                     <div class="qd-tab__bar">
-                        <a href="#tab-chart" class="is-selected">Chart</a>
-                        <a href="#tab-data">Data</a>
+                        <button data-target="#tab-chart" class="is-selected">Chart</button>
+                        <button data-target="#tab-data">Data</button>
                     </div>
 
                     <div id="tab-chart" class="tab-chart qd-tab__content">

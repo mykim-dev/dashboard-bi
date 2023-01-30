@@ -18,6 +18,16 @@ const routes = [
     component: () => import(/* webpackChunkName: "dashboardmake" */ '../views/DashboardMake.vue')
   },
   {
+    path: '/dashboardmake2',
+    name: 'dashboardmake2',
+    component: () => import(/* webpackChunkName: "dashboardmake" */ '../views/DashboardMake2.vue')
+  },
+  {
+    path: '/dashboardmake3',
+    name: 'dashboardmake3',
+    component: () => import(/* webpackChunkName: "dashboardmake" */ '../views/DashboardMake3.vue')
+  },
+  {
     path: '/dashboardlist',
     name: 'dashboardlist',
     component: () => import(/* webpackChunkName: "dashboardmake" */ '../views/DashboardList.vue')

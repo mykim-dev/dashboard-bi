@@ -1,9 +1,9 @@
 <template>
     <div class="qd-popup">
-        <div class="popup">
+        <div class="popup" style="width:500px;">
             <div class="popup__header">
                 <strong><i class="qd-icon"><font-awesome-icon icon="fa-solid fa-filter" /></i> Measure Filter</strong>
-                <button type="button" class="qd-icon-btn"><i class="qd-icon"><font-awesome-icon icon="fa-solid fa-xmark" /></i></button>
+                <button type="button" class="qd-icon-btn icon-close"></button>
             </div>
             <div class="popup__main">
                 <ul class="qd-form">
@@ -26,7 +26,7 @@
                         <strong><i class="qd-icon"><font-awesome-icon icon="fa-solid fa-table-list" /></i> 데이터</strong>
                         <div>
                             <button type="button" class="qd-btn">조회</button>
-                            <button type="button" class="qd-icon-btn"><font-awesome-icon icon="fa-solid fa-angle-down" /></button>
+                            <button type="button" class="qd-icon-btn icon-down"></button>
                         </div>
                     </dt>
                     <dd>

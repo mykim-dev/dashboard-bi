@@ -29,9 +29,12 @@
                 width: 80px;
             }
 
-            .qd-icon {
-                color: #fff;
-                font-size: 20px;
+            .icon-close {
+                &::before,
+                &::after {
+                    background-color: #fff;
+                }
+
             }
         }
     }
@@ -47,7 +50,7 @@
                 margin-bottom: 0;
                 justify-content: space-around;
 
-                &>a {
+                &>button {
                     line-height: 48px;
                     padding: 0;
                     margin-right: 2px;
@@ -178,19 +181,27 @@
 
 .list-chart-type {
     display: flex;
-    flex-wrap: wrap;
-    width: 294px;
+    flex-direction: column;
+    list-style: none;
+
+    &>li {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 4px 0;
+        border-bottom: 1px solid #efefef;
+    }
 
     .icon-chart {
-        width: 92px;
+        width: calc(100% / 3);
         height: 100px;
         padding-top: 60px;
-        margin: 3px;
+        border: 4px solid #fff;
         font-size: 0.875rem;
         font-weight: 100;
         background-color: #FAFCFF;
         background-repeat: no-repeat;
-        background-position: center 10px;
+        background-position: center 5px;
 
         &.bar-horizontal {
             background-image: url(../img/chart-bar-horizontal.png);
@@ -252,10 +263,6 @@
             background-image: url(../img/chart-area-stack.png);
         }
 
-        &.bar-vertical {
-            background-image: url(../img/chart-bar-vertical.png);
-        }
-
         &.bubble {
             background-image: url(../img/chart-bubble.png);
         }
@@ -274,6 +281,46 @@
 
         &.map-world {
             background-image: url(../img/chart-map-world.png);
+        }
+
+        &.map-s-korea {
+            background-image: url(../img/chart-map-s-korea.png);
+        }
+
+        &.link-text {
+            background-image: url(../img/chart-link-text.png);
+        }
+
+        &.link-node {
+            background-image: url(../img/chart-link-node.png);
+        }
+
+        &.icon-text-left {
+            background-image: url(../img/chart-icon-text-left.png);
+        }
+
+        &.icon-text-right {
+            background-image: url(../img/chart-icon-text-right.png);
+        }
+
+        &.icon-text-top {
+            background-image: url(../img/chart-icon-text-top.png);
+        }
+
+        &.icon-text-bottom {
+            background-image: url(../img/chart-icon-text-bottom.png);
+        }
+
+        &.text {
+            background-image: url(../img/chart-text.png);
+        }
+
+        &.timer {
+            background-image: url(../img/chart-timer.png);
+        }
+
+        &.grid {
+            background-image: url(../img/chart-grid.png);
         }
     }
 }
