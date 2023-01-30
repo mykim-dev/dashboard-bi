@@ -1,8 +1,8 @@
 <template>
-    <div class="qd-contents-wrap reportvmake">
-        <div class="qd-contents contents-make">
-            <div class="contents__head">
-                <button type="button" class="toggle-contents__head" @click="toggleContentsHeadSetting">
+    <div class="qd-contents reportvmake">
+        <div class="qd-contents-container contents-make">
+            <div class="contents__header">
+                <button type="button" class="toggle-contents__header" @click="toggleContentsHeadSetting">
                     <i class="qd-icon">
                         <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -12,10 +12,10 @@
                     </i> 리포트 정보
                 </button>
 
-                <h2 class="contents__head__title">newtest</h2>
-                <button type="button" class="qd-btn btn-primary">리포트 저장</button>
+                <h2 class="contents__header__title">newtest</h2>
+                <button type="button" class="qd-btn btn-primary btn-save">리포트 저장</button>
 
-                <div class="contents__head__setting" :class="{'is-open': isContentsHeadSetting}">
+                <div class="contents__header__setting" :class="{'is-open': isContentsHeadSetting}">
                     <ul class="qd-form">
                         <li class="qd-form__item">
                             <div class="qd-form__item-title">이름</div>
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="contents__body">
+            <div class="contents__main">
                 <div class="qd-tab">
                     <div class="qd-tab__bar">
                         <a href="#tab-chart" class="is-selected">Chart</a>

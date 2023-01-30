@@ -1,6 +1,12 @@
 :root {
     --dashboard-background-color: #f5f5f5;
     --dashboard-background-image: url(../img/bg-dashboard-white.png);
+    --dashboard-view-background-color: #fafafa;
+    --dashboard-view-head-background-color: #ffffff;
+    --dashboard-view-head-title-color: #387EE5;
+    --dashboard-tags-background-color:#0F5ED3;
+    --dashboard-tags-item-background-color: #457ed9;
+    --dashboard-tags-item-selected-background-color: #0F5ED3;
     --chartarea-background: #ffffff;
     --chartarea-title-color: #387EE5;
     --chartarea-brief-color: #8D8D8D;
@@ -15,6 +21,14 @@
 
     --dark-dashboard-background-color: #2B2E37;
     --dark-dashboard-background-image: url(../img/bg-dashboard-dark.png);
+    --dark-dashboard-view-background-color: #393C46;
+    --dark-dashboard-view-head-background-color: #2B2E37;
+    --dark-dashboard-view-head-title-color: #387EE5;
+
+    --dark-dashboard-tags-background-color: #2B2E37;
+    --dark-dashboard-tags-item-background-color: #414658;
+    --dark-dashboard-tags-item-selected-background-color: #2B2E37;
+
     --dark-chartarea-background: #414658;
     --dark-chartarea-title-color: #BAD6FF;
     --dark-chartarea-brief-color: #ffffff;

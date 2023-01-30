@@ -1,6 +1,6 @@
 <template>
-    <div class="qd-contents-wrap dashboardlist">
-        <div class="qd-contents contents-list">
+    <div class="qd-contents dashboardlist">
+        <div class="qd-contents-container contents-list">
             <div class="qd-toolbar">
                 <h2>
                     <i class="qd-icon"><font-awesome-icon icon="fa-solid fa-bars-staggered" /></i>

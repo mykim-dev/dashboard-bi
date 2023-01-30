@@ -1,13 +1,13 @@
 <template>
-    <div class="qd-right-panel" :class="toggleRightPanel">
-        <div class="qd-right-panel__head">
+    <div class="qd-contents-aside" :class="toggleRightPanel">
+        <div class="qd-contents-aside__header">
             <strong class="head-title">리포트 만들기</strong>
             <div class="head-ctrl">
                 <button type="button" class="qd-btn btn-secondary">저장</button>
                 <button type="button" class="qd-icon-btn" @click="closeRightPanel"><i class="qd-icon"><font-awesome-icon icon="fa-solid fa-xmark" /></i></button>
             </div>
         </div>
-        <div class="qd-right-panel__body">
+        <div class="qd-contents-aside__main">
             <div class="qd-tab">
                 <div class="qd-tab__bar">
                     <a href="#tab-chart" class="is-selected">Chart</a>
@@ -189,7 +189,7 @@
                     </div>
                 </div>
 
-                <div id="tab-option" class="tab-option qd-tab__content is-selected">
+                <div id="tab-option" class="tab-option qd-tab__content">
                     <div class="area-group">
                         <div class="area-item">
                             <dl class="qd-accordion-switch">
@@ -314,7 +314,7 @@
                     </div>
                 </div>
 
-                <div id="tab-data" class="tab-data qd-tab__content">
+                <div id="tab-data" class="tab-data qd-tab__content is-selected">
                     <div class="area-group">
                         <div class="area-item data-item">
                             <dl class="qd-accordion is-open">
@@ -356,8 +356,8 @@
                                     </ul>
 
                                     <div class="data-set">
-                                        <div class="data-set__head">Measures</div>
-                                        <div class="data-set__body">
+                                        <div class="data-set__header">Measures</div>
+                                        <div class="data-set__main">
                                             <div class="qd-search">
                                                 <input type="text" placeholder="검색어를 입력해주세요" />
                                                 <button type="button"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></button>
@@ -375,8 +375,8 @@
                                     </div>
 
                                     <div class="data-set">
-                                        <div class="data-set__head">Dimensions</div>
-                                        <div class="data-set__body">
+                                        <div class="data-set__header">Dimensions</div>
+                                        <div class="data-set__main">
                                             <div class="qd-search">
                                                 <input type="text" placeholder="검색어를 입력해주세요" />
                                                 <button type="button"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></button>
@@ -404,8 +404,8 @@
                                 </dt>
                                 <dd>
                                     <div class="data-set data-set-column">
-                                        <div class="data-set__head">Column</div>
-                                        <div class="data-set__body">
+                                        <div class="data-set__header">Column</div>
+                                        <div class="data-set__main">
                                             <div class="qd-search">
                                                 <input type="text" placeholder="검색어를 입력해주세요" />
                                                 <button type="button"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></button>
@@ -423,8 +423,8 @@
                                     </div>
 
                                     <div class="data-set data-set-value">
-                                        <div class="data-set__head">Value</div>
-                                        <div class="data-set__body">
+                                        <div class="data-set__header">Value</div>
+                                        <div class="data-set__main">
                                             <div class="qd-search">
                                                 <input type="text" placeholder="검색어를 입력해주세요" />
                                                 <button type="button"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></button>
@@ -442,8 +442,8 @@
                                     </div>
 
                                     <div class="data-set data-set-filter">
-                                        <div class="data-set__head">Filter</div>
-                                        <div class="data-set__body">
+                                        <div class="data-set__header">Filter</div>
+                                        <div class="data-set__main">
                                             <div class="qd-search">
                                                 <input type="text" placeholder="검색어를 입력해주세요" />
                                                 <button type="button"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></button>
@@ -559,7 +559,7 @@
             </div>
         </div>
 
-        <button type="button" class="toggle-right-panel" @click="changeRightPanel"><font-awesome-icon icon="fas fa-angle-double-left" /></button>
+        <button type="button" class="toggle-contents-aside" @click="changeRightPanel"><font-awesome-icon icon="fas fa-angle-double-left" /></button>
     </div>
 </template>
 

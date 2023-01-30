@@ -1,4 +1,4 @@
-.qd-right-panel {
+.qd-contents-aside {
     display: flex;
     flex-direction: column;        
     width: 360px;
@@ -6,7 +6,7 @@
     box-shadow: -8px 0 8px rgba(0, 0, 0, 0.1);
     transition: width ease 0.1s;
 
-    &__head {
+    &__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -36,7 +36,7 @@
         }
     }
 
-    &__body {
+    &__main {
         flex: 1;
         max-height: calc(100vh - 110px);
         padding-left: 30px;
@@ -69,9 +69,25 @@
                 overflow-y: auto;
             }
         }
+
+        .qd-form {
+            &__item {
+                &-title {
+                    max-width: 100px;
+                    
+                    &+.qd-form__item-con {
+                        max-width: 60%;
+                    }
+                }
+
+                &-con {
+
+                }
+            }
+        }
     }
 
-    .toggle-right-panel {
+    .toggle-contents-aside {
         width: 30px;
         position: absolute;
         top: 50px;
@@ -152,7 +168,7 @@
             }
         }
     
-        .toggle-right-panel {
+        .toggle-contents-aside {
             .svg-inline--fa {
                 transform: rotate(180deg);
             }
@@ -287,12 +303,12 @@
 .data-set {
     padding: 5px 0;
 
-    &__head {
+    &__header {
         padding: 5px 0;
         font-weight: 500;
     }
 
-    &__body {
+    &__main {
         border: 1px solid #b4b4b4;
         border-radius: 5px;
 
@@ -461,11 +477,11 @@
 
     &.data-set-column {
         .data-set {
-            &__head {
+            &__header {
                 color: #5092F3;
             }
 
-            &__body {
+            &__main {
                 border-color: #5092F3;
 
                 .qd-search {
@@ -483,11 +499,11 @@
 
     &.data-set-value {
         .data-set {
-            &__head {
+            &__header {
                 color: #3AA2CF;
             }
 
-            &__body {
+            &__main {
                 border-color: #3AA2CF;
 
                 .qd-search {
@@ -505,11 +521,11 @@
 
     &.data-set-filter {
         .data-set {
-            &__head {
+            &__header {
                 color: #4267EC;
             }
 
-            &__body {
+            &__main {
                 border-color: #4267EC;
 
                 .qd-search {

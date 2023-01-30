@@ -1,12 +1,10 @@
 .chart-area {
     display: inline-flex;
     flex-direction: column;
-    min-width: 300px;
-    min-height: 300px;
     border: 1px solid $chartarea-background;
     background-color: $chartarea-background;
     
-    &__head {
+    &__header {
         padding: 10px;
 
         .tool-bar {
@@ -38,22 +36,27 @@
         }
     }
 
-    &__body {
+    &__main {
         flex: 1;
         padding: 10px;
-        background: url(../img/img-nochart.png) no-repeat center center;
+        background: url(../img/img-nochart.png) no-repeat center center / auto 40%;
     }
+}
 
-    &.is-selected,
-    &:hover {
-        border-color: #387EE5;
+/* 데시보드 등록일때만 수정이 가능 */
+.contents-make {
+    .chart-area {
+        &.is-selected,
+        &:hover {
+            border-color: #387EE5;
 
-        .chart-area__head {
-            background-color: #EDF2F9;
+            .chart-area__header {
+                background-color: #EDF2F9;
 
-            .tool-bar {    
-                &__ctrl {
-                    display: block;
+                .tool-bar {    
+                    &__ctrl {
+                        display: block;
+                    }
                 }
             }
         }
@@ -79,12 +82,12 @@
 
     .qd-list {
         table {
-            border-spacing: 2px;
+            // border-spacing: 1px;
             background-color: $listarea-background;
 
             th,
             td {                
-                padding: 10px;
+                padding: 7px 14px;
                 border: 1px solid $listarea-table-border-color;
             }
 
@@ -111,6 +114,32 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.qd-tags {
+    display: flex;    
+    background-color: $dashboard-tags-background-color;
+    list-style: none;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 200px;
+        height: 50px;
+        padding: 0 10px 0 20px;
+        color: #fff;
+        margin-right: 2px;
+        background-color: $dashboard-tags-item-background-color;
+
+        .qd-icon-btn {
+            font-size: 18px;
+        }
+
+        &.is-selected {
+            background-color: $dashboard-tags-item-selected-background-color;
         }
     }
 }

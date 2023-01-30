@@ -45,7 +45,7 @@ html {
 
 .qd-select {
     display: inline-flex;
-    width: 100%;
+    flex: 1;
     min-height: 30px;
     padding: 3px 6px;
     font-size: 0.875rem;
@@ -225,7 +225,7 @@ html {
     align-items: center;
     height: 30px;
     line-height: 1;
-    padding: 0 10px;
+    padding: 0 20px;
     font-size: 0.875rem;
     color: #8d8d8d;
     border-radius: 5px;
@@ -255,6 +255,16 @@ html {
 
         &:hover {
             background-color: #CFE1FF;
+        }
+    }
+
+    &.btn-cancel {
+        color: #999999;
+        background-color: #f3f3f3;
+
+        &:hover {
+            color: #8E8E8E;
+            background-color: #e8e8e8;
         }
     }
 
@@ -517,6 +527,7 @@ dl.qd-accordion-switch {
 }
 
 .qd-form {
+    width: 100%;
     list-style: none;
     padding: 5px 0;
 
@@ -528,15 +539,10 @@ dl.qd-accordion-switch {
 
         &-title {
             display: inline-flex;
-            max-width: 100px;
             padding-right: 10px;
             // color: #5167b5;
             word-break: keep-all;
             letter-spacing: -0.5px;
-
-            &+.qd-form__item-con {
-                max-width: 200px;
-            }
         }
 
         &-con,

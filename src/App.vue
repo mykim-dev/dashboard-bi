@@ -1,10 +1,10 @@
 <template>
-    <div class="qd-wrap">
+    <div class="qd-container">
         <layoutMenu />
-        <div class="qd-container">
+        <main class="qd-main">
             <layoutTop />
             <router-view />
-        </div>
+        </main>
     </div>
 </template>
 

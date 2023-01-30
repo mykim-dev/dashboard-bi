@@ -21,12 +21,12 @@
                         <span>대시보드 관리</span>
                     </router-link>
                 </li>
-                <!-- <li>
+                <li>
                     <router-link to="/dashboard" class="nav-item">
                         <i class="qd-icon"><font-awesome-icon icon="fa-regular fa-file-lines" /></i>
                         <span>대시보드 상세</span>
                     </router-link>
-                </li> -->
+                </li>
                 <li>
                     <router-link to="/reportlist" class="nav-item">
                         <i class="qd-icon"><font-awesome-icon icon="fa-solid fa-chart-line" /></i>

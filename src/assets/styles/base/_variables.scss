@@ -1,18 +1,28 @@
-/* default background color */
+/* chartview */
 $dashboard-background-color: var(--dashboard-background-color);
 $dashboard-background-image: var(--dashboard-background-image);
+$dashboard-view-background-color: var(--dashboard-view-background-color);
+$dashboard-view-head-background-color: var(--dashboard-view-head-background-color);
+$dashboard-view-head-title-color: var(--dashboard-view-head-title-color);
 
+$dashboard-tags-background-color: var(--dashboard-tags-background-color);
+$dashboard-tags-item-background-color: var(--dashboard-tags-item-background-color);
+$dashboard-tags-item-selected-background-color: var(--dashboard-tags-item-selected-background-color);
+
+
+/* chartview - chartarea */
 $chartarea-background: var(--chartarea-background);
 $chartarea-title-color: var(--chartarea-title-color);
 $chartarea-brief-color: var(--chartarea-brief-color);
 
+/* chartview - titlearea */
 $titlearea-color: var(--titlearea-color);
 
+/* chartview - listarea */
 $listarea-background: var(--listarea-background);
 $listarea-table-border-color: var(--listarea-table-border-color);
 $listarea-table-th-background-color: var(--listarea-table-th-background-color);
 $listarea-table-th-color: var(--listarea-table-th-color);
 $listarea-table-td-color: var(--listarea-table-td-color);
-
 $listarea-table-td-background-hover-color: var(--listarea-table-td-background-hover-color);
 $listarea-table-td-hover-color: var(--listarea-table-td-hover-color);
