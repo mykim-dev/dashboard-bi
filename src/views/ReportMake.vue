@@ -70,61 +70,16 @@
             <div class="contents__main">
                 <div class="qd-tab">
                     <div class="qd-tab__bar">
-                        <button data-target="#tab-chart" class="is-selected">Chart</button>
-                        <button data-target="#tab-data">Data</button>
+                        <button data-target="tab-chart" @click="changeTab" :class="{'is-selected': selectTabContent === 'tab-chart'}">Chart</button>
+                        <button data-target="tab-data" @click="changeTab" :class="{'is-selected': selectTabContent === 'tab-data'}">Option</button>
                     </div>
 
-                    <div id="tab-chart" class="tab-chart qd-tab__content">
-                        <!-- <div id="DASHBOARDBODY"></div> -->
+                    <div v-if="selectTabContent === 'tab-chart'" class="tab-chart qd-tab__content" >
+                        <ReportChart />
                     </div>
-
-                    <div id="tab-data" class="tab-data qd-tab__content is-selected">
-                        <div class="qd-list">
-                            <table>
-                                <colgroup>
-                                    <col />
-                                    <col />
-                                    <col />
-                                    <col />
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>Data</th>
-                                        <th>Legend1</th>
-                                        <th>Legend2</th>
-                                        <th>Legend3</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>data a</td>
-                                        <td>100</td>
-                                        <td>249</td>
-                                        <td>32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>data a</td>
-                                        <td>100</td>
-                                        <td>249</td>
-                                        <td>32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>data a</td>
-                                        <td>100</td>
-                                        <td>249</td>
-                                        <td>32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>data a</td>
-                                        <td>100</td>
-                                        <td>249</td>
-                                        <td>32</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div v-else-if="selectTabContent === 'tab-data'" class="tab-chart qd-tab__content" >
+                        <ReportData />
                     </div>
-
                 </div>
             </div>
         </div>
@@ -135,21 +90,29 @@
 <script>
 // @ is an alias to /src
 import ReportSetting from '@/components/ReportSetting.vue'
+import ReportChart from '@/components/ReportChart.vue'
+import ReportData from '@/components/ReportData.vue'
 
 export default {
     name: 'reportvmake',
     data() {
 		return {			
-			isContentsHeadSetting: false
+			isContentsHeadSetting: false,
+            selectTabContent: 'tab-chart'
 		}
 	},
     components: {
-        ReportSetting
+        ReportSetting,
+        ReportChart,
+        ReportData
     },
     methods: {
 		toggleContentsHeadSetting() {
 			this.isContentsHeadSetting = this.isContentsHeadSetting ? false : true;
-		}
+		},
+        changeTab(e) {
+            this.selectTabContent = e.target.getAttribute('data-target');
+        }
 	}
 }
 </script>

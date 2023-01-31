@@ -288,6 +288,8 @@ html {
 }
 
 .icon-close {
+    position: relative;
+
     &::before,
     &::after {
         display: block;
@@ -313,6 +315,8 @@ html {
 }
 
 .icon-down {
+    position: relative;
+
     &::before,
     &::after {
         display: block;
@@ -339,6 +343,8 @@ html {
 }
 
 .icon-plus {
+    position: relative;
+
     &::before,
     &::after {
         display: block;
@@ -417,26 +423,21 @@ html {
     }
 
     .qd-tab__content {
-        display: none;
         flex: 1;
+        padding: 10px 20px;
         background-color: #fff;
-
-        &.is-selected {
-            display: block;
-            padding: 10px 20px;
-        }
+        overflow-y: auto;
     }
 }
 
 dl.qd-accordion {
     width: 100%;
-    padding: 5px 0;
 
     &>dt {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 30px;
+        padding: 0 0 5px 0;
         position: relative;
         border-bottom: 1px solid #ececec;
 

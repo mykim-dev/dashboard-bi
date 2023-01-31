@@ -105,7 +105,7 @@
 
     .area-group {
         .area-item {
-            padding: 0 15px;            
+            padding: 10px 15px;            
             border-bottom: 8px solid #FAFAFA;
         }
     }
@@ -181,16 +181,9 @@
 
 .list-chart-type {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 8px 0;
     list-style: none;
-
-    &>li {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        padding: 4px 0;
-        border-bottom: 1px solid #efefef;
-    }
 
     .icon-chart {
         width: calc(100% / 3);
@@ -201,7 +194,7 @@
         font-weight: 100;
         background-color: #FAFCFF;
         background-repeat: no-repeat;
-        background-position: center 5px;
+        background-position: center 10px;
 
         &.bar-horizontal {
             background-image: url(../img/chart-bar-horizontal.png);
@@ -297,10 +290,12 @@
 
         &.icon-text-left {
             background-image: url(../img/chart-icon-text-left.png);
+            background-position: center 25px;
         }
 
         &.icon-text-right {
             background-image: url(../img/chart-icon-text-right.png);
+            background-position: center 25px;
         }
 
         &.icon-text-top {
@@ -317,6 +312,7 @@
 
         &.timer {
             background-image: url(../img/chart-timer.png);
+            background-position: center 25px;
         }
 
         &.grid {
@@ -356,6 +352,7 @@
     }
 
     &__main {
+        min-height: 230px;
         border: 1px solid #b4b4b4;
         border-radius: 5px;
 
@@ -411,6 +408,13 @@
                         width: 20px;
                         height: 20px;
                     }
+
+                    .icon-close {
+                        &::before,
+                        &::after {
+                            background-color: #000;
+                        }
+                    }
                 }
 
                 &-set {
@@ -428,19 +432,15 @@
                     &::before {
                         display: block;
                         content: "";
-                        // width: 12px;
-                        // height: 12px;
+                        width: 12px;
+                        height: 12px;
                         position: absolute;
-                        bottom: -15px;
+                        bottom: -5px;
                         right: 28px;
-                        // background-color: #fff;
-                        box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
-                        // transform: rotate(45deg);
-
-                        border-top: 8px solid #fff;
-                        border-right: 8px solid transparent;
-                        border-left: 8px solid transparent;
-                        border-bottom: 8px solid transparent;
+                        border-bottom: 1px solid #d3d3d3;
+                        border-right: 1px solid #d3d3d3;
+                        background-color: #fff;                        
+                        transform: rotate(45deg);
                     }
 
                     dl {
